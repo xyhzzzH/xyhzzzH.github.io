@@ -443,19 +443,87 @@
             
         
         <article class="index-post">
-            <a class="abstract-title" href="/2022/09/23/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">
+            <a class="abstract-title" href="/2022/09/29/%E6%80%BB%E7%BB%93TodoList%E6%A1%88%E4%BE%8B/">
                 
-                <span class="abstract-title-text">我的第一篇博客文章</span>
+                <span class="abstract-title-text">总结TodoList案例</span>
             </a>
             <div class="abstract-content">
-                
+                总结TodoList案例
+
+组件化编码流程：
+拆分静态组件：组件要按照功能点拆分，命名不要与HTML元素冲突
+实现动态组件：考虑好数据的存放位置，数据是一个数组在用还是一些组件在用：
+一个组件在用：放在组件自身即可
+一些组件在用：放在他们共同的父组件上
+
+
+实现交互：从绑定事件开始
+
+
+props适用于：
+父组件 &#x3D;&#x3D;&gt; 子组件 通信
+子组件 &#x3D;&#x3D;&gt; 父组件 通信（要求父先给子一个函数)
+
+
+使用v-model时要切记：v-model绑定的值不能是props传过来的值，因为props不可以修改的！
+props传过来的若是对象类型，修改对...
             </div>
             <!-- read more -->
             
             <div class="abstract-post-meta">
                 <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/09/23">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/09/23</span>
+                <div class="abstract-date" title="Last updated: 2022/09/29">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/09/29</span>
+                </div>
+                <!-- tags -->
+                
+            </div>
+        </article>
+        <div class="index-post-divider"></div>
+    
+        
+        
+        
+        
+            
+        
+        <article class="index-post">
+            <a class="abstract-title" href="/2022/09/29/webStorage/">
+                
+                <span class="abstract-title-text">webStorage本地存储服务</span>
+            </a>
+            <div class="abstract-content">
+                webStorage
+存储内容一般支持5mn左右。
+
+浏览器通过Window.sessionStorage 和Window.localStorage 属性来实现本地存储机制。
+
+相关API：
+
+.setItem(‘key’,’value’); 
+  该方法接收一个键和值作为参数，会把键值对添加到存储中，如果键名存在就会替换。
+
+.getItem(‘key’)
+​	该方法接收一个键名，返回一个参数。
+
+.removeItem(‘key’)
+​	该方法接收一个键名作为参数，把所对应的键值对删除。
+
+.clear()
+   该方法清空存储中所有数据。
+
+
+
+备注：
+
+SessionStorag...
+            </div>
+            <!-- read more -->
+            
+            <div class="abstract-post-meta">
+                <!-- date -->
+                <div class="abstract-date" title="Last updated: 2022/09/29">
+                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/09/29</span>
                 </div>
                 <!-- tags -->
                 
@@ -487,34 +555,6 @@ Run server1$ hexo ...
                 <!-- date -->
                 <div class="abstract-date" title="Last updated: 2022/09/23">
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/09/23</span>
-                </div>
-                <!-- tags -->
-                
-            </div>
-        </article>
-        <div class="index-post-divider"></div>
-    
-        
-        
-        
-        
-            
-        
-        <article class="index-post">
-            <a class="abstract-title" href="/2022/07/28/%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/">
-                
-                <span class="abstract-title-text">[Untitled Post]</span>
-            </a>
-            <div class="abstract-content">
-                
-数据预处理1 加载数据123456789101112131415161718192021import pandas as pd#加载Excel数据filapath = &#x27;&#x27;df_excel = pd.read_excel(filepath)#加载text数据df_text = pd.read_text(filepath)#加载csv数据df_csv = pd.read_csv(filepath)#读取多个文件并合并为一个新文件import glob#设置文件的路径path = &#x27;&#x27;#获取路径下所有csv的文件all_files = glob.gl...
-            </div>
-            <!-- read more -->
-            
-            <div class="abstract-post-meta">
-                <!-- date -->
-                <div class="abstract-date" title="Last updated: 2022/07/30">
-                    <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2022/07/28</span>
                 </div>
                 <!-- tags -->
                 
@@ -752,20 +792,20 @@ Run server1$ hexo ...
             
         
         <li class="archive-post-item">
+            <span class="archive-post-date">09/29</span>
+            <a class="archive-post-title" href="/2022/09/29/%E6%80%BB%E7%BB%93TodoList%E6%A1%88%E4%BE%8B/">总结TodoList案例</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/29</span>
+            <a class="archive-post-title" href="/2022/09/29/webStorage/">webStorage本地存储服务</a>
+        </li>
+    
+        
+        <li class="archive-post-item">
             <span class="archive-post-date">09/23</span>
             <a class="archive-post-title" href="/2022/09/23/hello-world/">Hello World</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">09/23</span>
-            <a class="archive-post-title" href="/2022/09/23/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%E6%96%87%E7%AB%A0/">我的第一篇博客文章</a>
-        </li>
-    
-        
-        <li class="archive-post-item">
-            <span class="archive-post-date">07/28</span>
-            <a class="archive-post-title" href="/2022/07/28/%E6%95%B0%E6%8D%AE%E6%B8%85%E6%B4%97%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/">[Untitled Post]</a>
         </li>
     
     </div>
